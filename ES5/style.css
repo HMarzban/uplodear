@@ -1,0 +1,42 @@
+#DropZon {
+  border: 3px dashed black;
+  border-radius: 6px;
+  width: 480px;
+  margin: 50px auto;
+  height: 90px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+#DropZon p {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #ccc;
+}
+
+#DropZon:hover {
+  border-color: orangered;
+  box-shadow: 1px 1px 18px rgba(0, 0, 0, .2)
+}
+
+#DropZon .progressBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 16px;
+  text-align: center;
+  background-color: #cddc39;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 16px;
+  transition: all .3s;
+}
