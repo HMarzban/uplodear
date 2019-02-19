@@ -32,6 +32,7 @@ Options          | Default                           | Description
 ---             | ---                               | ---
 el              | `DropZon `                        | drop zone html tag by id
 url             | `null`                            | post url address
+multiple        | `false`                           | allowed to enter more than one file
 before          |                                   | call function before send data to server
 after           |                                   | call function after data sent to server
 progress        |                                   | show progress

@@ -8,9 +8,10 @@
     uploadProgress : data.uploadProgress || "Uploading is in progress...",
     uploadFinish: data.uploadFinish || "Upload finish!",
     uploadFaild: data.uploadFaild || "Uploading face to an Error!",
+    multiple: data.multiple || false,
     before: data.before ,
     after: data.after ,
-    progress: data.progress 
+    progress: data.progress
   }
 
   var dropArea = document.getElementById(configs.el);
@@ -20,7 +21,7 @@
   inputFile.type = "file";
   inputFile.style.display = "none"
   //inputFile.accept = "image/*"
-  inputFile.multiple = true;
+  inputFile.multiple = configs.multiple;
 
   pinput.textContent = configs.centerText;
 
@@ -147,6 +148,7 @@
 
 var upload = new uploader({
   el : "DropZon",
+  multiple: true,
   url: "https://api.cloudinary.com/v1_1/joezimim007/image/upload",
   before: function(done){
     setTimeout(function(){
