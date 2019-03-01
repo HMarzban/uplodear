@@ -23,7 +23,10 @@
 
 #DropZon:hover {
   border-color: orangered;
-  box-shadow: 1px 1px 18px rgba(0, 0, 0, .2)
+  box-shadow: 1px 1px 18px rgba(0, 0, 0, .2), inset 1px 1px 2px rgba(0, 0, 0, .1);
+}
+#DropZon:active {
+  box-shadow:1px 1px 2px rgba(0, 0, 0, .1),inset 1px -1px 4px rgba(0, 0, 0, .2);
 }
 
 #DropZon .progressBar {

@@ -98,9 +98,9 @@ class uploader {
 
   uploadFile = (file, i) => {
 
-    var url = this.url;
-    var xhr = new XMLHttpRequest();
-    var formData = new FormData();
+    const url = this.url;
+    const xhr = new XMLHttpRequest();
+    const formData = new FormData();
     xhr.open('POST', url, true);
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
@@ -131,9 +131,7 @@ class uploader {
 
     // Befor send XHR 
     if(this.before)
-      this.before(function(){
-        xhr.send(formData);
-      });
+      this.before(() => xhr.send(formData) );
     else
       xhr.send(formData);
    
@@ -151,16 +149,16 @@ var upload = new uploader({
   url: "https://api.cloudinary.com/v1_1/joezimim007/image/upload",
   before: function(done){
     setTimeout(function(){
-      console.log("befor up");
+      console.log("Befor send");
       done();
     }, 1000);
   },
   after: function(data, status){
-    console.log("data done");
-    console.log(data, status)
+    console.log("Data sent");
+    console.log(data, status);
   },
   progress: function(total, lists){
-    console.log(total,lists )
+    console.log(total,lists);
   }
 });
 console.timeEnd("time");
