@@ -1,3 +1,7 @@
+## Historical upload examples
+
+These ES5, ES6, and Vue examples explore upload interactions. They preserve the original versions and the attribution below. The Vue example is a manual demonstration, not an automated test suite.
+
 # uplodear
 
 ### UPlodear Options
